@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="88fd4f3c-a07d-4b62-90fc-59dafc32cc5b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/TourGuideModule.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/beans/Attraction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/beans/Location.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/beans/Provider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/beans/TripPricerTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/beans/VisitedLocation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/controller/TourGuideController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/dto/AllUsersCurrentLocations.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/dto/NearAttractionsDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/helper/InternalTestHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/proxies/GpsUtilProxy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/proxies/RewardCentralProxy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/proxies/TripPricerProxy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/service/RewardsService$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/service/RewardsService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/service/TourGuideService$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/service/TourGuideService$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/service/TourGuideService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/tracker/Tracker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/user/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/user/UserPreferences.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/main/tourGuide/user/UserReward.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/test/tourGuide/TestPerformance.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/test/tourGuide/TestRewardsService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/classes/java/test/tourGuide/TestTourGuideService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/jacoco/test.exec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/reports/tests/test/classes/tourGuide.TestRewardsService.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/reports/tests/test/css/base-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/reports/tests/test/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/reports/tests/test/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/reports/tests/test/js/report.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/reports/tests/test/packages/tourGuide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/test-results/test/TEST-tourGuide.TestRewardsService.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/beans/Attraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/beans/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/beans/Provider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/beans/TripPricerTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/beans/VisitedLocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/proxies/GpsUtilProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/proxies/RewardCentralProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/proxies/TripPricerProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gpsUtil/src/main/java/com/gpsUtil/gpsUtil/controller/GpsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gpsUtil/src/main/java/com/gpsUtil/gpsUtil/model/Attraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gpsUtil/src/main/java/com/gpsUtil/gpsUtil/model/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gpsUtil/src/main/java/com/gpsUtil/gpsUtil/model/VisitedLocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gpsUtil/src/main/java/com/gpsUtil/gpsUtil/service/GpsUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rewardCentral/rewardCentral/RewardCentralApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rewardCentral/rewardCentral/controller/RewardCentralController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rewardCentral/rewardCentral/service/RewardCentralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/rewardCentral/rewardCentral/RewardCentralApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tripPricer/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tripPricer/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tripPricer/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tripPricer/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tripPricer/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tripPricer/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tripPricer/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tripPricer/src/main/java/com/tripPricer/tripPricer/TripPricerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tripPricer/src/main/java/com/tripPricer/tripPricer/controller/TripPricerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tripPricer/src/main/java/com/tripPricer/tripPricer/model/Provider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tripPricer/src/main/java/com/tripPricer/tripPricer/model/TripPricerTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tripPricer/src/main/java/com/tripPricer/tripPricer/service/TripPricer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tripPricer/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tripPricer/src/test/java/com/tripPricer/tripPricer/TripPricerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TourGuide/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../TourGuide/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TourGuide/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../TourGuide/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/TourGuideModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/TourGuideModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/controller/TourGuideController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/controller/TourGuideController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/dto/NearAttractionsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/dto/NearAttractionsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/helper/InternalTestHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/helper/InternalTestHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/service/RewardsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/service/RewardsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/service/TourGuideService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/service/TourGuideService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/user/UserReward.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TourGuide/src/main/java/tourGuide/user/UserReward.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TourGuide/src/test/java/tourGuide/TestPerformance.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TourGuide/src/test/java/tourGuide/TestPerformance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TourGuide/src/test/java/tourGuide/TestRewardsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TourGuide/src/test/java/tourGuide/TestRewardsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TourGuide/src/test/java/tourGuide/TestTourGuideService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TourGuide/src/test/java/tourGuide/TestTourGuideService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1lK4d34VTqwzS9OlK5O6xK3dOG4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="D:/projetoc7" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.rewardCentral.rewardCentral.Controller" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="RewardCentralApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rewardCentral.rewardCentral.RewardCentralApplication" />
+      <module name="rewardCentral.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rewardCentral.rewardCentral.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.RewardCentralApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88fd4f3c-a07d-4b62-90fc-59dafc32cc5b" name="Default Changelist" comment="" />
+      <created>1607332532441</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607332532441</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="413" y="143" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1607332996146">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="143" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1607332996146" />
+    <state x="465" y="223" width="583" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1607332997970">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="465" y="223" width="583" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1607332997970" />
+    <state width="1367" height="185" key="GridCell.Tab.0.bottom" timestamp="1608134567708">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1367" height="185" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608134567708" />
+    <state width="1367" height="185" key="GridCell.Tab.0.center" timestamp="1608134567708">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1367" height="185" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1608134567708" />
+    <state width="1367" height="185" key="GridCell.Tab.0.left" timestamp="1608134567708">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1367" height="185" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1608134567708" />
+    <state width="1367" height="185" key="GridCell.Tab.0.right" timestamp="1608134567708">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1367" height="185" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608134567708" />
+    <state x="498" y="145" key="chooseDestDirectoryDialog" timestamp="1607332986781">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="498" y="145" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1607332986781" />
+  </component>
+</project>

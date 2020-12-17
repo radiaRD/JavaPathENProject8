@@ -10,19 +10,21 @@ import java.util.UUID;
 import org.junit.Test;
 
 import gpsUtil.GpsUtil;
-import gpsUtil.location.VisitedLocation;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import rewardCentral.RewardCentral;
+import tourGuide.beans.Provider;
+import tourGuide.beans.VisitedLocation;
 import tourGuide.dto.AllUsersCurrentLocations;
 import tourGuide.dto.NearAttractionsDTO;
 import tourGuide.helper.InternalTestHelper;
+import tourGuide.proxies.GpsUtilProxy;
+import tourGuide.proxies.RewardCentralProxy;
+import tourGuide.proxies.TripPricerProxy;
 import tourGuide.service.RewardsService;
 import tourGuide.service.TourGuideService;
 import tourGuide.user.User;
-import tripPricer.Provider;
 
 
 @RunWith(SpringRunner.class)
@@ -32,26 +34,30 @@ public class TestTourGuideService {
     @Autowired
     TourGuideService tourGuideService;
 
+    @Autowired
+    GpsUtilProxy gpsUtilProxy;
+    @Autowired
+    RewardCentralProxy rewardCentralProxy;
+
+
     @Test
     public void getUserLocation() throws NumberFormatException {
         Locale.setDefault(Locale.US);
-        GpsUtil gpsUtil = new GpsUtil();
-        RewardsService rewardsService = new RewardsService(gpsUtil, new RewardCentral());
+        RewardsService rewardsService = new RewardsService(gpsUtilProxy, rewardCentralProxy);
         InternalTestHelper.setInternalUserNumber(0);
-        TourGuideService tourGuideService = new TourGuideService(gpsUtil, rewardsService);
+        TourGuideService tourGuideService = new TourGuideService(gpsUtilProxy, rewardsService);
 
         User user = new User(UUID.randomUUID(), "jon", "000", "jon@tourGuide.com");
-        VisitedLocation visitedLocation = tourGuideService.trackUserLocation(user);
+        tourGuide.beans.VisitedLocation visitedLocation = tourGuideService.trackUserLocation(user);
         tourGuideService.tracker.stopTracking();
-        assertTrue(visitedLocation.userId.equals(user.getUserId()));
+        assertTrue(visitedLocation.getUserId().equals(user.getUserId()));
     }
 
     @Test
     public void addUser() {
-        GpsUtil gpsUtil = new GpsUtil();
-        RewardsService rewardsService = new RewardsService(gpsUtil, new RewardCentral());
+        RewardsService rewardsService = new RewardsService(gpsUtilProxy, rewardCentralProxy);
         InternalTestHelper.setInternalUserNumber(0);
-        TourGuideService tourGuideService = new TourGuideService(gpsUtil, rewardsService);
+        TourGuideService tourGuideService = new TourGuideService(gpsUtilProxy, rewardsService);
 
         User user = new User(UUID.randomUUID(), "jon", "000", "jon@tourGuide.com");
         User user2 = new User(UUID.randomUUID(), "jon2", "000", "jon2@tourGuide.com");
@@ -71,10 +77,9 @@ public class TestTourGuideService {
     @Test
     public void getAllUsers() {
 
-        GpsUtil gpsUtil = new GpsUtil();
-        RewardsService rewardsService = new RewardsService(gpsUtil, new RewardCentral());
+        RewardsService rewardsService = new RewardsService(gpsUtilProxy, rewardCentralProxy);
         InternalTestHelper.setInternalUserNumber(0);
-        TourGuideService tourGuideService = new TourGuideService(gpsUtil, rewardsService);
+        TourGuideService tourGuideService = new TourGuideService(gpsUtilProxy, rewardsService);
 
         User user = new User(UUID.randomUUID(), "jon", "000", "jon@tourGuide.com");
         User user2 = new User(UUID.randomUUID(), "jon2", "000", "jon2@tourGuide.com");
@@ -93,17 +98,16 @@ public class TestTourGuideService {
     @Test
     public void trackUser() {
         Locale.setDefault(Locale.US);
-        GpsUtil gpsUtil = new GpsUtil();
-        RewardsService rewardsService = new RewardsService(gpsUtil, new RewardCentral());
+        RewardsService rewardsService = new RewardsService(gpsUtilProxy, rewardCentralProxy);
         InternalTestHelper.setInternalUserNumber(0);
-        TourGuideService tourGuideService = new TourGuideService(gpsUtil, rewardsService);
+        TourGuideService tourGuideService = new TourGuideService(gpsUtilProxy, rewardsService);
 
         User user = new User(UUID.randomUUID(), "jon", "000", "jon@tourGuide.com");
-        VisitedLocation visitedLocation = tourGuideService.trackUserLocation(user);
+       tourGuide.beans.VisitedLocation visitedLocation = tourGuideService.trackUserLocation(user);
 
         tourGuideService.tracker.stopTracking();
 
-        assertEquals(user.getUserId(), visitedLocation.userId);
+        assertEquals(user.getUserId(), visitedLocation.getUserId());
     }
 
     //    @Ignore // Not yet implemented
@@ -125,16 +129,14 @@ public class TestTourGuideService {
         List<AllUsersCurrentLocations> nearAttractions = tourGuideService.getAllCurrentLocations();
         tourGuideService.tracker.stopTracking();
 
-        assertEquals(100, nearAttractions.size());
+        assertEquals(100000, nearAttractions.size());
     }
 
     @Test
     public void getTripDeals() {
-        GpsUtil gpsUtil = new GpsUtil();
-        RewardsService rewardsService = new RewardsService(gpsUtil, new RewardCentral());
-        InternalTestHelper.setInternalUserNumber(0);
 
-        TourGuideService tourGuideService = new TourGuideService(gpsUtil, rewardsService);
+  //      RewardsService rewardsService = new RewardsService(gpsUtilProxy, rewardCentralProxy);
+        InternalTestHelper.setInternalUserNumber(0);
 
         User user = new User(UUID.randomUUID(), "jon", "000", "jon@tourGuide.com");
 
@@ -145,6 +147,5 @@ public class TestTourGuideService {
         assertEquals(user.getTripDeals(), providers);
         assertEquals(5, providers.size());
     }
-
 
 }

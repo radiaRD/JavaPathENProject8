@@ -1,16 +1,14 @@
 package tourGuide.dto;
 
-import gpsUtil.location.Location;
-
 public class NearAttractionsDTO  {
 private double distance;
 private String nameAttraction;
 private double latitude;
 private double longitude;
-private Location location;
+private tourGuide.beans.Location location;
 private int reward;
 
-    public NearAttractionsDTO(String nameAttraction,double distance, double latitude,double longitude,Location location, int reward)
+    public NearAttractionsDTO(String nameAttraction, double distance, double latitude, double longitude, tourGuide.beans.Location location, int reward)
     {
         this.distance = distance;
         this.nameAttraction = nameAttraction;
@@ -53,11 +51,11 @@ private int reward;
         this.longitude = longitude;
     }
 
-    public Location getLocation() {
+    public tourGuide.beans.Location getLocation() {
         return location;
     }
 
-    public void setLocation(Location location) {
+    public void setLocation(tourGuide.beans.Location location) {
         this.location = location;
     }
 

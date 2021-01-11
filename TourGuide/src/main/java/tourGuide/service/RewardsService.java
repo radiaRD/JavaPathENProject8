@@ -1,11 +1,11 @@
 package tourGuide.service;
 
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,11 +47,11 @@ public class RewardsService {
     }
 
     public void calculateRewards(User user) {
-        List<tourGuide.beans.VisitedLocation> userLocations = user.getVisitedLocations();
-        List<tourGuide.beans.Attraction> attractions = gpsUtilProxy.getAttractions();
+        List<VisitedLocation> userLocations = user.getVisitedLocations().stream().collect(Collectors.toList());
+        List<Attraction> attractions = gpsUtilProxy.getAttractions().stream().collect(Collectors.toList());
 
-        for (tourGuide.beans.VisitedLocation visitedLocation : userLocations) {
-            for (tourGuide.beans.Attraction attraction : attractions) {
+        for (VisitedLocation visitedLocation : userLocations) {
+            for (Attraction attraction : attractions) {
                 if (user.getUserRewards().stream().filter(r -> r.attraction.getAttractionName().equals(attraction.getAttractionName())).count() == 0) {
                     if (nearAttraction(visitedLocation, attraction)) {
                         user.addUserReward(new UserReward(visitedLocation, attraction, getRewardPoints(attraction, user)));
@@ -59,34 +59,34 @@ public class RewardsService {
                 }
             }
         }
-
     }
 
-    public void calculateRewardsWithThread (User user){
+    public void calculateRewardsWithThread(User user) {
         executorService.execute(new Runnable() {
             public void run() {
-            calculateRewards(user);
+                calculateRewards(user);
             }
-        }); }
+        });
+    }
 
     public void shutdown() throws InterruptedException {
         executorService.shutdown();
         executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
     }
 
-        public boolean isWithinAttractionProximity(Attraction attraction, Location location) {
-        return !(getDistance(new Location(attraction.latitude, attraction.longitude), location) > attractionProximityRange);
+    public boolean isWithinAttractionProximity(Attraction attraction, Location location) {
+        return !(getDistance(new Location(attraction.getLatitude(), attraction.getLongitude()), location) > attractionProximityRange);
     }
 
     private boolean nearAttraction(VisitedLocation visitedLocation, Attraction attraction) {
-        return !(getDistance(new Location(attraction.latitude, attraction.longitude), visitedLocation.getLocation()) > proximityBuffer);
+        return !(getDistance(new Location(attraction.getLatitude(), attraction.getLongitude()), visitedLocation.getLocation()) > proximityBuffer);
     }
 
     private int getRewardPoints(Attraction attraction, User user) {
         return rewardCentralProxy.getAttractionRewardPoints(attraction.getAttractionId(), user.getUserId());
     }
 
-    public double getDistance(tourGuide.beans.Location loc1, tourGuide.beans.Location loc2) {
+    public double getDistance(Location loc1, Location loc2) {
         double lat1 = Math.toRadians(loc1.getLatitude());
         double lon1 = Math.toRadians(loc1.getLongitude());
         double lat2 = Math.toRadians(loc2.getLatitude());
@@ -99,5 +99,6 @@ public class RewardsService {
         double statuteMiles = STATUTE_MILES_PER_NAUTICAL_MILE * nauticalMiles;
         return statuteMiles;
     }
+
 
 }

@@ -28,14 +28,14 @@ public class TourGuideController {
 
     @RequestMapping("/getLocation")
     public String getLocation(@RequestParam String userName) {
-       tourGuide.beans.VisitedLocation visitedLocation = tourGuideService.getUserLocation(getUser(userName));
+        VisitedLocation visitedLocation = tourGuideService.getUserLocation(getUser(userName));
         return JsonStream.serialize(visitedLocation.getLocation());
     }
 
-    //  TODO: Change this method to no longer return a List of Attractions.
+
     @RequestMapping("/getNearbyAttractions")
     public String getNearbyAttractions(@RequestParam String userName) {
-       tourGuide.beans.VisitedLocation visitedLocation = tourGuideService.getUserLocation(getUser(userName));
+        tourGuide.beans.VisitedLocation visitedLocation = tourGuideService.getUserLocation(getUser(userName));
         return JsonStream.serialize(tourGuideService.getNearByAttractions(visitedLocation));
     }
 
@@ -53,15 +53,13 @@ public class TourGuideController {
 
     @RequestMapping("/getAllCurrentLocations")
     public List<AllUsersCurrentLocations> getAllCurrentLocations() {
-        // TODO: Get a list of every user's most recent location as JSON
         return tourGuideService.getAllCurrentLocations();
     }
 
     @RequestMapping("/getTripDeals")
     @ResponseBody
-    public List<Provider> getTripDeals(@RequestParam (value ="userName")String userName, @RequestParam( value = "tripDuration")  int tripDuration, @RequestParam (value = "numberOfAdults") int numberOfAdults, @RequestParam(value = "numberOfChildren")  int numberOfChildren) {
+    public List<Provider> getTripDeals(@RequestParam(value = "userName") String userName, @RequestParam(value = "tripDuration") int tripDuration, @RequestParam(value = "numberOfAdults") int numberOfAdults, @RequestParam(value = "numberOfChildren") int numberOfChildren) {
         List<Provider> providers = tourGuideService.getTripDeals(getUser(userName), tripDuration, numberOfAdults, numberOfChildren);
-   //     return JsonStream.serialize(providers);
         return providers;
     }
 

@@ -20,6 +20,6 @@ public class RewardCentralController {
 
     @RequestMapping("/getReward/{attractionId}/{userId}")
     public int getAttractionRewardPoints(@PathVariable UUID attractionId, @PathVariable UUID userId) {
-        return rewardCentralService.getAttractionRewardPoints(attractionId,userId);
+        return rewardCentralService.getAttractionRewardPoints(attractionId, userId);
     }
 }

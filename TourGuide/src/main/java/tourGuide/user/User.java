@@ -1,6 +1,7 @@
 package tourGuide.user;
 
 import tourGuide.beans.Provider;
+import tourGuide.beans.VisitedLocation;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,10 +14,10 @@ public class User {
     private String phoneNumber;
     private String emailAddress;
     private Date latestLocationTimestamp;
-    private List<tourGuide.beans.VisitedLocation> visitedLocations = new ArrayList<>();
+    private List<VisitedLocation> visitedLocations = new ArrayList<>();
     private List<UserReward> userRewards = new ArrayList<>();
     private UserPreferences userPreferences = new UserPreferences();
-    private List<tourGuide.beans.Provider> tripDeals = new ArrayList<>();
+    private List<Provider> tripDeals = new ArrayList<>();
 
     public User(UUID userId, String userName, String phoneNumber, String emailAddress) {
         this.userId = userId;
@@ -57,11 +58,11 @@ public class User {
         return latestLocationTimestamp;
     }
 
-    public void addToVisitedLocations(tourGuide.beans.VisitedLocation visitedLocation) {
+    public void addToVisitedLocations(VisitedLocation visitedLocation) {
         visitedLocations.add(visitedLocation);
     }
 
-    public List<tourGuide.beans.VisitedLocation> getVisitedLocations() {
+    public List<VisitedLocation> getVisitedLocations() {
         return visitedLocations;
     }
 
@@ -87,11 +88,11 @@ public class User {
         this.userPreferences = userPreferences;
     }
 
-    public tourGuide.beans.VisitedLocation getLastVisitedLocation() {
+    public VisitedLocation getLastVisitedLocation() {
         return visitedLocations.get(visitedLocations.size() - 1);
     }
 
-    public void setTripDeals(List<tourGuide.beans.Provider> tripDeals) {
+    public void setTripDeals(List<Provider> tripDeals) {
         this.tripDeals = tripDeals;
     }
 

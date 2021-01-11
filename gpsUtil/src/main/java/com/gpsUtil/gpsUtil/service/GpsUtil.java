@@ -68,7 +68,7 @@ public class GpsUtil {
         int random = ThreadLocalRandom.current().nextInt(30, 100);
 
         try {
-            TimeUnit.MILLISECONDS.sleep((long)random);
+            TimeUnit.MILLISECONDS.sleep((long) random);
         } catch (InterruptedException var3) {
         }
 

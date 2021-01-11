@@ -28,6 +28,6 @@ public class GpsController {
 
     @RequestMapping("/getAttractions")
     public List<Attraction> getAttractions() {
-        return  gpsUtil.getAttractions();
+        return gpsUtil.getAttractions();
     }
 }

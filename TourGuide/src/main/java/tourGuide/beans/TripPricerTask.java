@@ -4,11 +4,11 @@ import java.util.UUID;
 
 public class TripPricerTask {
 
-    private  UUID attractionId;
-    private  String apiKey;
-    private  int adults;
-    private  int children;
-    private  int nightsStay;
+    private UUID attractionId;
+    private String apiKey;
+    private int adults;
+    private int children;
+    private int nightsStay;
 
     public TripPricerTask() {
     }

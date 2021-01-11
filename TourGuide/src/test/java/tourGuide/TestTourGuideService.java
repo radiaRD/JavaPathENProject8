@@ -9,7 +9,6 @@ import java.util.UUID;
 
 import org.junit.Test;
 
-import gpsUtil.GpsUtil;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,7 +20,6 @@ import tourGuide.dto.NearAttractionsDTO;
 import tourGuide.helper.InternalTestHelper;
 import tourGuide.proxies.GpsUtilProxy;
 import tourGuide.proxies.RewardCentralProxy;
-import tourGuide.proxies.TripPricerProxy;
 import tourGuide.service.RewardsService;
 import tourGuide.service.TourGuideService;
 import tourGuide.user.User;
@@ -48,7 +46,7 @@ public class TestTourGuideService {
         TourGuideService tourGuideService = new TourGuideService(gpsUtilProxy, rewardsService);
 
         User user = new User(UUID.randomUUID(), "jon", "000", "jon@tourGuide.com");
-        tourGuide.beans.VisitedLocation visitedLocation = tourGuideService.trackUserLocation(user);
+        VisitedLocation visitedLocation = tourGuideService.trackUserLocation(user);
         tourGuideService.tracker.stopTracking();
         assertTrue(visitedLocation.getUserId().equals(user.getUserId()));
     }
@@ -103,14 +101,14 @@ public class TestTourGuideService {
         TourGuideService tourGuideService = new TourGuideService(gpsUtilProxy, rewardsService);
 
         User user = new User(UUID.randomUUID(), "jon", "000", "jon@tourGuide.com");
-       tourGuide.beans.VisitedLocation visitedLocation = tourGuideService.trackUserLocation(user);
+        VisitedLocation visitedLocation = tourGuideService.trackUserLocation(user);
 
         tourGuideService.tracker.stopTracking();
 
         assertEquals(user.getUserId(), visitedLocation.getUserId());
     }
 
-    //    @Ignore // Not yet implemented
+
     @Test
     public void getNearbyAttractions() {
         Locale.setDefault(Locale.US);
@@ -135,7 +133,6 @@ public class TestTourGuideService {
     @Test
     public void getTripDeals() {
 
-  //      RewardsService rewardsService = new RewardsService(gpsUtilProxy, rewardCentralProxy);
         InternalTestHelper.setInternalUserNumber(0);
 
         User user = new User(UUID.randomUUID(), "jon", "000", "jon@tourGuide.com");

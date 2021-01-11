@@ -4,9 +4,9 @@ import java.util.UUID;
 
 public class Provider {
 
-    public  String name;
-    public  double price;
-    public  UUID tripId;
+    public String name;
+    public double price;
+    public UUID tripId;
 
     public Provider() {
     }

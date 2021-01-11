@@ -40,8 +40,8 @@ public class TestRewardsService {
         TourGuideService tourGuideService = new TourGuideService(gpsUtilProxy, rewardsService);
 
         User user = new User(UUID.randomUUID(), "jon", "000", "jon@tourGuide.com");
-        tourGuide.beans.Attraction attraction = gpsUtilProxy.getAttractions().get(0);
-        user.addToVisitedLocations(new VisitedLocation(user.getUserId(), new Location(attraction.latitude,attraction.longitude), new Date()));
+        Attraction attraction = gpsUtilProxy.getAttractions().get(0);
+        user.addToVisitedLocations(new VisitedLocation(user.getUserId(), new Location(attraction.getLatitude(), attraction.getLongitude()), new Date()));
         tourGuideService.trackUserLocation(user);
         List<UserReward> userRewards = user.getUserRewards();
         tourGuideService.tracker.stopTracking();
@@ -53,18 +53,17 @@ public class TestRewardsService {
 
         RewardsService rewardsService = new RewardsService(gpsUtilProxy, rewardCentralProxy);
         Attraction attraction = gpsUtilProxy.getAttractions().get(0);
-        assertTrue(rewardsService.isWithinAttractionProximity(attraction, new Location(attraction.latitude,attraction.longitude)));
+        assertTrue(rewardsService.isWithinAttractionProximity(attraction, new Location(attraction.getLatitude(), attraction.getLongitude())));
     }
 
-    //   	@Ignore // Needs fixed - can throw ConcurrentModificationException
+
     @Test
-    public void nearAllAttractions()  {
+    public void nearAllAttractions() {
 
         RewardsService rewardsService = new RewardsService(gpsUtilProxy, rewardCentralProxy);
         rewardsService.setProximityBuffer(Integer.MAX_VALUE);
 
         InternalTestHelper.setInternalUserNumber(1);
-//       TourGuideService tourGuideService = new TourGuideService(gpsUtilProxy, rewardsService);
         User user = tourGuideService.getAllUsers().get(0);
         rewardsService.calculateRewards(user);
         List<UserReward> userRewards = tourGuideService.getUserRewards(user);

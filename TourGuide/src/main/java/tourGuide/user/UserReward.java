@@ -1,15 +1,15 @@
 package tourGuide.user;
 
-import tourGuide.beans.Attraction;
-import tourGuide.beans.VisitedLocation;
+        import tourGuide.beans.Attraction;
+        import tourGuide.beans.VisitedLocation;
 
 public class UserReward {
 
-    public final tourGuide.beans.VisitedLocation visitedLocation;
-    public final tourGuide.beans.Attraction attraction;
+    public final VisitedLocation visitedLocation;
+    public final Attraction attraction;
     private int rewardPoints;
 
-    public UserReward(tourGuide.beans.VisitedLocation visitedLocation, tourGuide.beans.Attraction attraction, int rewardPoints) {
+    public UserReward(VisitedLocation visitedLocation, Attraction attraction, int rewardPoints) {
         this.visitedLocation = visitedLocation;
         this.attraction = attraction;
         this.rewardPoints = rewardPoints;

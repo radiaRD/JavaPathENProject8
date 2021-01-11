@@ -1,8 +1,8 @@
 package tourGuide.beans;
 
 public class Location {
-   private double longitude;
-   private double latitude;
+    private double longitude;
+    private double latitude;
 
     public Location() {
     }

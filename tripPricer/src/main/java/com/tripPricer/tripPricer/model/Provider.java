@@ -12,4 +12,5 @@ public class Provider {
         this.tripId = tripId;
         this.price = price;
     }
+
 }
